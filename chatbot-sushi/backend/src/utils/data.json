@@ -1,0 +1,18 @@
+[
+    {
+      "name": "Sushi Roll 1",
+      "description": "Delicious roll with salmon and avocado",
+      "price": 1200
+    },
+    {
+      "name": "Sushi Roll 2",
+      "description": "Roll with tuna and cream cheese",
+      "price": 1300
+    },
+    {
+      "name": "Sushi Roll 3",
+      "description": "Roll with shrimp and avocado",
+      "price": 1400
+    }
+  ]
+  
