@@ -1,15 +1,15 @@
+// src/routes/menuRoutes.js
 const express = require('express');
-const Menu = require('../models/Menu');
 const router = express.Router();
+const { getMenuAPI, addMenuItemAPI, updateMenuItemAPI } = require('../controllers/menuController');
 
-// GET /api/menu
-router.get('/menu', async (req, res) => {
-    try {
-        const menu = await Menu.find();
-        res.status(200).json(menu);
-    } catch (error) {
-        res.status(500).json({ error: 'Error fetching the menu' });
-    }
-});
+// Ruta para obtener todo el menú
+router.get('/menu', getMenuAPI);
+
+// Ruta para agregar un nuevo plato
+router.post('/menu', addMenuItemAPI);
+
+// Ruta para actualizar un plato existente
+router.put('/menu/:id', updateMenuItemAPI);
 
 module.exports = router;
